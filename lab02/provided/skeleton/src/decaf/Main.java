@@ -37,7 +37,10 @@ class Main {
                             case DecafLexer.CHAR:
 		        				type = " CHARLITERAL";
 		        				break;
-		        			}
+                            case DecafLexer.INT_HEXA:
+                                type = " INTLITERAL";
+                                break;
+                            }
 		        			System.out.println (token.getLine() + type + " " + text);
 		        		}
 		        		done = true;

@@ -37,7 +37,7 @@ class Main {
                             case DecafLexer.CHAR:
 		        				type = " CHARLITERAL";
 		        				break;
-                            case DecafLexer.INT_HEXA:
+                            case DecafLexer.HEXA:
                                 type = " INTLITERAL";
                                 break;
                             }

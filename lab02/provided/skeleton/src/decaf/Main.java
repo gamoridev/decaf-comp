@@ -40,6 +40,12 @@ class Main {
                             case DecafLexer.HEXA:
                                 type = " INTLITERAL";
                                 break;
+                            case DecafLexer.INT:
+                                type = " INTLITERAL";
+                                break;
+                            case DecafLexer.STATEMENT:
+                                type = " DISGRAÇA";
+                                break;
                             }
 		        			System.out.println (token.getLine() + type + " " + text);
 		        		}

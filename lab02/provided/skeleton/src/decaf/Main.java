@@ -31,21 +31,24 @@ class Main {
 
 		        			switch (token.getType())
 		        			{
-                            case DecafLexer.CHAR:
-		        				type = " CHARLITERAL";
-		        				break;
-                            case DecafLexer.HEXA:
-                                type = " INTLITERAL";
-                                break;
-                            case DecafLexer.INT:
-                                type = " INTLITERAL";
-                                break;
-                            case DecafLexer.STATEMENT:
-                                type = "";
-                                break;
-                            case DecafLexer.ID:
-                                type = " IDENTIFIER";
-                                break;
+                                case DecafLexer.STRING:
+                                    type = " STRINGLITERAL";
+                                    break;
+                                case DecafLexer.CHAR:
+    		        				type = " CHARLITERAL";
+    		        				break;
+                                case DecafLexer.HEXA:
+                                    type = " INTLITERAL";
+                                    break;
+                                case DecafLexer.INT:
+                                    type = " INTLITERAL";
+                                    break;
+                                case DecafLexer.STATEMENT:
+                                    type = "";
+                                    break;
+                                case DecafLexer.ID:
+                                    type = " IDENTIFIER";
+                                    break;
                             }
 		        			System.out.println (token.getLine() + type + " " + text);
 		        		}

@@ -17,7 +17,19 @@ tokens
 LCURLY : '{';
 RCURLY : '}';
 
-STATEMENT : 'if' | 'for' | 'return' | 'break;' | 'continue;';
+STATEMENT : 'if'
+| 'boolean'
+| 'callout'
+| 'class'
+| 'else'
+| 'int'
+| 'return'
+| 'void'
+| 'for'
+| 'break'
+| 'continue';
+
+BOOLEAN : 'false'| 'true';
 
 ID  : ALPHA ([a-zA-Z0-9_]+)* | '_' ID  ;
 
@@ -29,7 +41,7 @@ INT : DIGIT+ ;
 
 DIGIT : [0-9];
 
-ARITH_OP : '+' | '-' | '*' | '/' | '%' | '>' | '<' | '>=' |  '<=' | '!=' | '=' | '&&' '||';
+ARITH_OP : '+' | '-' | '*' | '/' | '%' | '>' | '<' | '>=' |  '<=' | '!=' | '=' | '&&' | '||';
 
 HEXA : '0x' [0-9a-fA-F]+;
 

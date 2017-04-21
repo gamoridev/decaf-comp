@@ -31,6 +31,9 @@ class Main {
 
 		        			switch (token.getType())
 		        			{
+                                case DecafLexer.BOOLEAN:
+                                    type = " BOOLEANLITERAL";
+                                    break;
                                 case DecafLexer.STRING:
                                     type = " STRINGLITERAL";
                                     break;

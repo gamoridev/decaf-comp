@@ -17,18 +17,17 @@ tokens
 LCURLY : '{';
 RCURLY : '}';
 
+STATEMENT : 'if' | 'for' | 'return' | 'break;' | 'continue;';
 
-ID  : ALPHA ([a-zA-Z0-9_]+)* | '_' ID ;
+ID  : ALPHA ([a-zA-Z0-9_]+)* | '_' ID  ;
 
 ALPHA : [a-zA-Z];
 
 // [a-zA-Z0-9_]+; | ALPHA ID | '_' ()* ID | ALPHA INT
 
-INT : DIGIT+;
+INT : DIGIT+ ;
 
 DIGIT : [0-9];
-
-STATEMENT : 'if' | 'for' | 'return' | 'break;' | 'continue;';
 
 ARITH_OP : '+' | '-' | '*' | '/' | '%';
 
@@ -38,9 +37,9 @@ WS_ : (' ' | '\n') -> skip;
 
 SL_COMMENT : '//' (~'\n')* '\n' -> skip;
 
-CHAR : '\'' (ESC|~('\''|'"'|'\\'|'\t')) '\'';
+CHAR : '\'' (ESC|'\\''"'|~('\''|'"'|'\\')) '\'';
 STRING : '"' (ESC|~'"')* '"';
 
 
 fragment
-ESC :  '\\' ('n'|'\\');
+ESC :  '\\' ('n'|'t'|'\\');

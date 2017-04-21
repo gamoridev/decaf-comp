@@ -64,11 +64,10 @@ class Main {
         		DecafParser parser = new DecafParser(tokens);
                 parser.program();
         	}
-        	
+
         } catch(Exception e) {
         	// print the error:
             System.out.println(CLI.infile+" "+e);
         }
     }
 }
-

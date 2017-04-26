@@ -52,6 +52,9 @@ class Main {
                                 case DecafLexer.ID:
                                     type = " IDENTIFIER";
                                     break;
+                                default:
+                                    type = "";
+                                    break;
                             }
 		        			System.out.println (token.getLine() + type + " " + text);
 		        		}

@@ -38,8 +38,11 @@ class Main {
                                     type = " STRINGLITERAL";
                                     break;
                                 case DecafLexer.CHAR:
-    		        				type = " CHARLITERAL";
-    		        				break;
+    		        				              type = " CHARLITERAL";
+    		        				                    break;
+                                case DecafLexer.HEXA_ERROR:
+                                    type = " ERROR";
+                                    break;
                                 case DecafLexer.HEXA:
                                     type = " INTLITERAL";
                                     break;

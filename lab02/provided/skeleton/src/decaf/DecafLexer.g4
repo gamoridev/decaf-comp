@@ -9,25 +9,35 @@ options
   language=Java;
 }
 
-tokens
-{
-  TK_class
-}
+//tokens
+//{
+//  TK_class
+//}
 
 LCURLY : '{';
 RCURLY : '}';
 
-STATEMENT : 'if'
-| 'boolean'
-| 'callout'
-| 'class'
-| 'else'
-| 'int'
-| 'return'
-| 'void'
-| 'for'
-| 'break'
-| 'continue';
+TK_CLASS : 'class';
+
+TK_IF : 'if';
+
+TK_ELSE : 'else';
+
+TK_INT : 'int';
+
+TK_BOOLEAN : 'boolean';
+
+TK_VOID : 'void';
+
+TK_CALLOUT : 'callout';
+
+TK_RETURN : 'return';
+
+TK_FOR : 'for';
+
+TK_BREAK : 'break';
+
+TK_CONTINUE : 'continue';
 
 BOOLEAN : 'false'| 'true';
 

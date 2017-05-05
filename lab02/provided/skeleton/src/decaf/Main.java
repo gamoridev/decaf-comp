@@ -31,6 +31,18 @@ class Main {
 
 		        			switch (token.getType())
 		        			{
+                                case DecafLexer.TK_CLASS:
+                                case DecafLexer.TK_IF:
+                                case DecafLexer.TK_ELSE:
+                                case DecafLexer.TK_INT:
+                                case DecafLexer.TK_BOOLEAN:
+                                case DecafLexer.TK_VOID:
+                                case DecafLexer.TK_CALLOUT:
+                                case DecafLexer.TK_RETURN:
+                                case DecafLexer.TK_FOR:
+                                case DecafLexer.TK_BREAK:
+                                case DecafLexer.TK_CONTINUE:
+                                    break;
                                 case DecafLexer.BOOLEAN:
                                     type = " BOOLEANLITERAL";
                                     break;
@@ -38,8 +50,8 @@ class Main {
                                     type = " STRINGLITERAL";
                                     break;
                                 case DecafLexer.CHAR:
-    		        				              type = " CHARLITERAL";
-    		        				                    break;
+        				            type = " CHARLITERAL";
+        				            break;
                                 case DecafLexer.HEXA_ERROR:
                                     type = " ERROR";
                                     break;
@@ -48,9 +60,6 @@ class Main {
                                     break;
                                 case DecafLexer.INT:
                                     type = " INTLITERAL";
-                                    break;
-                                case DecafLexer.STATEMENT:
-                                    type = "";
                                     break;
                                 case DecafLexer.ID:
                                     type = " IDENTIFIER";

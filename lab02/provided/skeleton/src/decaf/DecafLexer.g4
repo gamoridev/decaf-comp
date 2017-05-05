@@ -14,8 +14,9 @@ options
 //  TK_class
 //}
 
-LCURLY : '{';
-RCURLY : '}';
+TK_LCURLY : '{';
+
+TK_RCURLY : '}';
 
 TK_CLASS : 'class';
 
@@ -39,24 +40,29 @@ TK_BREAK : 'break';
 
 TK_CONTINUE : 'continue';
 
+TK_COLON : ',';
+
+TK_SEMICOLON : ';';
+
+TK_LSB : '[';
+
+TK_RSB : ']';
+
+TK_LPAREN : '(';
+
+TK_RPAREN : ')';
+
 BOOLEAN : 'false'| 'true';
 
 ID  : ALPHA ([a-zA-Z0-9_]+)* | '_' ID  ;
 
 ALPHA : [a-zA-Z];
 
-// [a-zA-Z0-9_]+; | ALPHA ID | '_' ()* ID | ALPHA INT
-
 INT : DIGIT+ ;
 
 DIGIT : [0-9];
 
 ARITH_OP : '+' | '-' | '*' | '/' | '%' | '>' | '<' | '>=' |  '<=' | '!=' | '=' | '&&' | '||';
-
-TOKENS : ','
-| ';'
-| '[' | ']'
-| '(' | ')';
 
 HEXA :  '0x' [0-9a-fA-F]+;
 

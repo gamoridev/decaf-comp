@@ -12,7 +12,9 @@ options
 
 program : TK_CLASS ID TK_LCURLY (field_decl)* (method_decl)* TK_RCURLY EOF;
 
-field_decl : ( TK_LCURLY ID | ID TK_LSB INT TK_RSB TK_RCURLY) +;
+field_decl : field (TK_COMMA field)*;
+
+field : (ID | ID TK_LSB INT TK_LSB INT TK_RSB);
 
 method_decl : ((type|TK_VOID) ID TK_LPAREN TK_RPAREN block)+;
 

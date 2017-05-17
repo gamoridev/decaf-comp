@@ -22,7 +22,7 @@ params : TK_LPAREN (|type ID (TK_COMMA type ID)*) TK_RPAREN;
 
 block : TK_LCURLY (var_decla)* (statment)* TK_RCURLY;
 
-var_decla : TK_INT TK_INT TK_INT ;
+var_decla : type id (TK_COMMA type id)* TK_SEMICOLON;
 
 statment: TK_INT TK_INT TK_INT ;
 

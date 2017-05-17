@@ -14,11 +14,11 @@ options
 //  TK_class
 //}
 
+TK_CLASS : 'class';
+
 TK_LCURLY : '{';
 
 TK_RCURLY : '}';
-
-TK_CLASS : 'class';
 
 TK_IF : 'if';
 

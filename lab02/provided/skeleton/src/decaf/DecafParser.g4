@@ -10,6 +10,8 @@ options
   tokenVocab=DecafLexer;
 }
 
-program : TK_CLASS ID LCURLY field_decl RCURLY EOF;
+program : TK_CLASS ID TK_LCURLY field_decl method_decl TK_RCURLY EOF;
 
-field_decl : ID;
+field_decl : TK_VOID;
+
+method_decl : 

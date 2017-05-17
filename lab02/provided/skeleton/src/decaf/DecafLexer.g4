@@ -40,7 +40,9 @@ TK_BREAK : 'break';
 
 TK_CONTINUE : 'continue';
 
-TK_COLON : ',';
+TK_COMMA : ',';
+
+TK_COLLON : ':';
 
 TK_SEMICOLON : ';';
 

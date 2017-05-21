@@ -30,7 +30,7 @@ location : ID | ID TK_LSB expr TK_RSB;
 
 assign_op : ASSIGN | PLUS_ASSIGN | MINUS_ASSIGN;
 
-expr : location | method_call | literal;
+expr : location | method_call | literal | expr bin_op expr| ARITH_OP expr | EXCLAMETION_POINT expr | TK_LPAREN expr TK_RPAREN ;
 
 method_call : method_name TK_LPAREN (expr (TK_COMMA expr)*)* TK_RPAREN
               | TK_CALLOUT TK_LPAREN STRING (TK_COMA callout_arg)* TK_RPAREN;
@@ -38,5 +38,7 @@ method_call : method_name TK_LPAREN (expr (TK_COMMA expr)*)* TK_RPAREN
 callout_arg : expr | STRING;
 
 literal : INT | CHAR | BOOLEAN;
+
+bin_op : ARITH_OP;
 
 type : (TK_BOOLEAN|TK_INT) ;

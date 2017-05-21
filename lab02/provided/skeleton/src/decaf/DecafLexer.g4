@@ -68,6 +68,8 @@ DIGIT : [0-9];
 
 ARITH_OP : '+' | '-' | '*' | '/' | '%' | '>' | '<' | '>=' |  '<=' | '!=' | '&&' | '||';
 
+EXCLAMATION_POINT : '!';
+
 ASSIGN : '=';
 
 PLUS_ASSIGN : '+=' ;

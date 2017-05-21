@@ -40,6 +40,8 @@ TK_BREAK : 'break';
 
 TK_CONTINUE : 'continue';
 
+TK_PROGRAM : 'Program' ;
+
 TK_COMMA : ',';
 
 TK_COLLON : ':';
@@ -64,7 +66,13 @@ INT : DIGIT+ ;
 
 DIGIT : [0-9];
 
-ARITH_OP : '+' | '-' | '*' | '/' | '%' | '>' | '<' | '>=' |  '<=' | '!=' | '=' | '&&' | '||';
+ARITH_OP : '+' | '-' | '*' | '/' | '%' | '>' | '<' | '>=' |  '<=' | '!=' | '&&' | '||';
+
+ASSIGN : '=';
+
+PLUS_ASSIGN : '+=' ;
+
+MINUS_ASSIGN : '-=';
 
 HEXA :  '0x' [0-9a-fA-F]+;
 

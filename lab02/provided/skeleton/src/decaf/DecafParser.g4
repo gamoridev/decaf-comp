@@ -54,18 +54,10 @@ expr : location
 
 callout_arg : expr | STRING;
 
-bin_op : arith_op
-| rel_op 
-| eq_op
-| cond_op;
-
-arith_op : INT;
-
-rel_op : INT;
-
-eq_op : INT;
-
-cond_op : INT;
+bin_op : ARITH_OP
+| REL_OP
+| EQ_OP
+| COND_OP;
 
 literal : int_literal | CHAR | BOOLEAN;
 

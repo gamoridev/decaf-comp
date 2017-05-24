@@ -12,9 +12,9 @@ options
 
 program : TK_CLASS TK_PROGRAM TK_LCURLY (field_decl)*  (method_decl)* TK_RCURLY;
 
-field_decl : field (TK_COMMA field)*;
+field_decl : field (TK_COMMA field)* TK_SEMICOLON;
 
-field : (ID | ID TK_LSB int_literal TK_RSB);
+field : ( type ID | type ID TK_LSB int_literal TK_RSB);
 
 method_decl : (type | TK_VOID) ID params block;
 
@@ -26,12 +26,12 @@ var_decla : type ID (TK_COMMA type ID)* TK_SEMICOLON;
 
 type : (TK_BOOLEAN|TK_INT) ;
 
-statment: location assign_op expr 
-  | method_call 
+statment: location assign_op expr TK_SEMICOLON
+  | method_call TK_SEMICOLON
   | TK_IF TK_LPAREN expr TK_RPAREN block | TK_IF TK_LPAREN expr TK_RPAREN block (TK_ELSE block) 
-  | TK_FOR TK_LPAREN ID ASSIGN expr TK_SEMICOLON expr TK_SEMICOLON  block TK_RPAREN
-  | TK_RETURN (|expr)
-  | TK_BREAK
+  | TK_FOR ID ASSIGN expr TK_COMMA expr block
+  | TK_RETURN (|expr) TK_SEMICOLON
+  | TK_BREAK TK_SEMICOLON
   | TK_CONTINUE
   | block;
 

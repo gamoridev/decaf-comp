@@ -5,10 +5,10 @@ import java.io.*;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.*;
 import java6035.tools.CLI.*;
-
 class Main {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         try {
         	CLI.parse (args, new String[0]);
 
@@ -83,7 +83,12 @@ class Main {
         		DecafLexer lexer = new DecafLexer(new ANTLRInputStream(inputStream));
 				CommonTokenStream tokens = new CommonTokenStream(lexer);
         		DecafParser parser = new DecafParser(tokens);
-                parser.program();
+                
+                ParseTree tree = parser.program();
+                for(int i = 0; tree.getChild(i) != null; i++){
+                    System.out.println( tree.getChild(i).getText());
+                }
+                //System.out.println(tree.toStringTree(parser));
         	}
 
         } catch(Exception e) {

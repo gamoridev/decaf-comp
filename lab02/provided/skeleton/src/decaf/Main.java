@@ -90,6 +90,7 @@ class Main {
                 }
                 //System.out.println(tree.toStringTree(parser));
         	}
+            //adicionar aqui o novo if
 
         } catch(Exception e) {
         	// print the error:

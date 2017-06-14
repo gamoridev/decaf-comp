@@ -1,4 +1,6 @@
 class Program {
-    int a;
-    int a;
+    void main (){
+        int a;
+        int a;
+    }
 }

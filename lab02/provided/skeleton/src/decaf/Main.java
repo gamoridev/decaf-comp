@@ -85,12 +85,26 @@ class Main {
         		DecafParser parser = new DecafParser(tokens);
                 
                 ParseTree tree = parser.program();
-                for(int i = 0; tree.getChild(i) != null; i++){
-                    System.out.println( tree.getChild(i).getText());
-                }
-                //System.out.println(tree.toStringTree(parser));
+                // for(int i = 0; tree.getChild(i) != null; i++){
+                //     System.out.println( tree.getChild(i).getText());
+                // }
+                System.out.println(tree.toStringTree(parser));
         	}
-            //adicionar aqui o novo if
+            else if(CLI.target == CLI.INTER)
+			{
+				DecafLexer lexer = new DecafLexer(new ANTLRInputStream(inputStream));
+				CommonTokenStream tokens = new CommonTokenStream(lexer);
+        		DecafParser parser = new DecafParser(tokens);
+
+                ParseTree tree = parser.program();
+
+                if(CLI.debug)
+                    System.out.println(tree.toStringTree(parser));
+
+                ParseTreeWalker walker = new ParseTreeWalker();
+                Listener listener = new Listener();
+                walker.walk(listener, tree);
+			}
 
         } catch(Exception e) {
         	// print the error:
